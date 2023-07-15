@@ -1,0 +1,14 @@
+<ul class="list-group">
+    <li class="list-group-item my-1" *ngFor="let userDetails of multiUserDetails.items">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex">
+                <img src="{{userDetails.avatar_url}}" alt="User Image" class="img-responsive user-image">
+                <h4>{{userDetails.login}}</h4>
+            </div>
+            <div>
+                <button type="button" class="btn" (click)="viewSelectedUserDetails(userDetails)">View Details</button>
+            </div>
+        </div>
+
+    </li>
+</ul>

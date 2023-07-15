@@ -1,0 +1,9 @@
+<!-- Single User Card -->
+<ng-container *ngIf="showSingleUserCard; else showMultiUserCard">
+    <app-single-user-card [userDetails]="singleUserDetails"></app-single-user-card>
+</ng-container>
+
+<!-- Multi User Card -->
+<ng-template #showMultiUserCard>
+    <app-multi-user-card [multiUserDetails]="userDetails" (selectedSingleUserEvent)="fetchSingleUserDetails($event)"></app-multi-user-card>
+</ng-template>
